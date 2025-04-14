@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #001e29;
+  color: #00bbd8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  padding: 20px;
+}
+body .wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  body .wrapper {
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper {
+    align-items: center;
+  }
+}
+body .wrapper h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  body .wrapper h1 {
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .wrapper h1 {
+    font-size: 4rem;
+  }
+}
+body .wrapper .searchBox {
+  margin-top: 20px;
+}
+@media (min-width: 640px) {
+  body .wrapper .searchBox {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper .searchBox {
+    width: 65%;
+  }
+}
+@media (min-width: 1024px) {
+  body .wrapper .searchBox {
+    display: flex;
+    justify-content: flex-start;
+    width: 55%;
+  }
+}
+@media (min-width: 1280px) {
+  body .wrapper .searchBox {
+    width: 40%;
+  }
+}
+body .wrapper .searchBox .inputBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+@media (min-width: 1024px) {
+  body .wrapper .searchBox .inputBox {
+    width: 60%;
+  }
+}
+body .wrapper .searchBox .inputBox .input {
+  width: 70%;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: #001e29;
+  outline: none;
+  border: 1px solid #00849e;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #00bbd8;
+}
+body .wrapper .searchBox .inputBox .input:focus {
+  box-shadow: 1px 1px 10px #00849e;
+}
+body .wrapper .searchBox .inputBox .input::-moz-placeholder {
+  color: #00849e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+body .wrapper .searchBox .inputBox .input::placeholder {
+  color: #00849e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+body .wrapper .searchBox .searchBtn {
+  width: 30%;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid #00849e;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: #00849e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+body .wrapper .searchBox .searchBtn:hover {
+  box-shadow: 1px 1px 10px #00849e;
+  color: #00bbd8;
+}
+body .wrapper .error {
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+  height: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: tomato;
+}
+@media (min-width: 640px) {
+  body .wrapper .error {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper .error {
+    font-size: 1.2rem;
+    width: 65%;
+  }
+}
+@media (min-width: 1024px) {
+  body .wrapper .error {
+    width: 55%;
+  }
+}
+@media (min-width: 1280px) {
+  body .wrapper .error {
+    width: 40%;
+  }
+}
+body .wrapper .weatherBox {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(45deg, #001e29 0%, #003849 64%);
+  padding: 8px;
+  box-shadow: -1px 1px 6px #00bbd8;
+  border-radius: 10px;
+  color: #00bbd8;
+}
+@media (min-width: 640px) {
+  body .wrapper .weatherBox {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  body .wrapper .weatherBox {
+    width: 65%;
+  }
+}
+@media (min-width: 1024px) {
+  body .wrapper .weatherBox {
+    width: 55%;
+  }
+}
+@media (min-width: 1280px) {
+  body .wrapper .weatherBox {
+    width: 40%;
+  }
+}
+body .wrapper .weatherBox .cityInfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body .wrapper .weatherBox .cityInfo img {
+  width: 74px;
+}
+body .wrapper .weatherBox .wheatherData .wheatherDataTilte .tempContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+}
+body .wrapper .weatherBox .wheatherData .wheatherDataTilte .tempContent .temperatureData {
+  font-weight: 600;
+}
+body .wrapper .weatherBox .wheatherData .wheatherDataTilte .humidityContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 2px solid;
+}
+body .wrapper .weatherBox .wheatherData .wheatherDataTilte .humidityContent .humidityData {
+  font-weight: 600;
+}
+body .wrapper .weatherBox .wheatherData .wheatherDataTilte .windContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 2px solid;
+}
+body .wrapper .weatherBox .wheatherData .wheatherDataTilte .windContent .windData {
+  font-weight: 600;
+}
+body .wrapper .weatherBox .wheatherData .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+body .wrapper .update {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Pacifico&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <h1>Weather App</h1>
+
+    <div class="searchBox">
+      <div class="inputBox">
+        <input class="input" type="text" placeholder="Enter the name of the city">
+        <button class="searchBtn">Search</button>
+      </div>
+    </div>
+
+
+    <div class="error">
+      <p class="errorText"></p>
+    </div>
+
+
+
+    <div class="weatherBox">
+
+      <div class="cityInfo">
+        <h2 class="cityName"></h2>
+        <img src="" alt="">
+      </div>
+
+      <div class="wheatherData">
+
+        <div class="wheatherDataTilte">
+
+          <div class="tempContent">
+            <h4>Temperature:</h4>
+            <p class="temperatureData"></p>
+          </div>
+
+
+          <div class="humidityContent">
+            <h4>Humidity:</h4>
+            <p class="humidityData"></p>
+          </div>
+
+          <div class="windContent">
+            <h4>Wind:</h4>
+            <p class="windData"></p>
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+      <div class="update">
+
+        <p>Last update in local time:</p>
+        <p class="lastUpdate"> </p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

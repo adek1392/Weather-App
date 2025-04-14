@@ -1,0 +1,239 @@
+@use './mixins';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #001e29;
+	color: #00bbd8;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+	padding: 20px;
+	.wrapper {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+
+		@include mixins.largePhone {
+			align-items: center;
+		}
+
+		@include mixins.tablets {
+			align-items: center;
+		}
+
+		h1 {
+			font-family: 'Pacifico', cursive;
+			font-size: 3.4rem;
+			font-weight: 400;
+			text-align: center;
+
+			@include mixins.tablets {
+				font-size: 3.6rem;
+			}
+
+			@include mixins.laptops {
+				font-size: 4rem;
+			}
+		}
+
+		.searchBox {
+			margin-top: 20px;
+
+			@include mixins.largePhone {
+				width: 75%;
+			}
+
+			@include mixins.tablets {
+				width: 65%;
+			}
+
+			@include mixins.laptops {
+				display: flex;
+				justify-content: flex-start;
+				width: 55%;
+			}
+			@include mixins.desktops {
+				width: 40%;
+			}
+
+			.inputBox {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 8px;
+
+				@include mixins.laptops {
+					width: 60%;
+				}
+
+				.input {
+					width: 70%;
+					padding: 5px 10px;
+					border-radius: 8px;
+					background-color: #001e29;
+					outline: none;
+					border: 1px solid #00849e;
+					font-size: 1.4rem;
+					text-align: center;
+					color: #00bbd8;
+				}
+				.input:focus {
+					box-shadow: 1px 1px 10px #00849e;
+				}
+
+				.input::placeholder {
+					color: #00849e;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 500;
+					font-size: 1.1rem;
+				}
+			}
+
+			.searchBtn {
+				width: 30%;
+				padding: 5px 10px;
+				background: none;
+				border: 1px solid #00849e;
+				border-radius: 8px;
+				font-size: 1.4rem;
+				color: #00849e;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 500;
+			}
+
+			.searchBtn:hover {
+				box-shadow: 1px 1px 10px #00849e;
+				color: #00bbd8;
+			}
+		}
+
+		.error {
+			display: flex;
+			align-items: center;
+			margin: 2px 0;
+			height: 25px;
+			font-size: 1.1rem;
+			font-weight: bold;
+			color: tomato;
+
+			@include mixins.largePhone {
+				width: 75%;
+			}
+
+			@include mixins.tablets {
+				font-size: 1.2rem;
+				width: 65%;
+			}
+
+			@include mixins.laptops {
+				width: 55%;
+			}
+
+			@include mixins.desktops {
+				width: 40%;
+			}
+		}
+
+		.weatherBox {
+			display: flex;
+			flex-direction: column;
+			background-image: linear-gradient(45deg, #001e29 0%, #003849 64%);
+			padding: 8px;
+			box-shadow: -1px 1px 6px #00bbd8;
+			border-radius: 10px;
+			color: #00bbd8;
+
+			@include mixins.largePhone {
+				width: 75%;
+			}
+
+			@include mixins.tablets {
+				width: 65%;
+			}
+
+			@include mixins.laptops {
+				width: 55%;
+			}
+
+			@include mixins.desktops {
+				width: 40%;
+			}
+
+			.cityInfo {
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				margin-bottom: 10px;
+
+				img {
+					width: 74px;
+				}
+			}
+
+			.wheatherData {
+				.wheatherDataTilte {
+					.tempContent {
+						display: flex;
+						justify-content: space-between;
+						padding: 15px 20px;
+						border-top: 2px solid;
+						border-bottom: 2px solid;
+
+						.temperatureData {
+							font-weight: 600;
+						}
+					}
+
+					.humidityContent {
+						display: flex;
+						justify-content: space-between;
+						padding: 15px 20px;
+						border-bottom: 2px solid;
+
+						.humidityData {
+							font-weight: 600;
+						}
+					}
+
+					.windContent {
+						display: flex;
+						justify-content: space-between;
+						padding: 15px 20px;
+						border-bottom: 2px solid;
+
+						.windData {
+							font-weight: 600;
+						}
+					}
+				}
+
+				.data {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 10px;
+					border-top: 1px solid;
+					border-bottom: 1px solid;
+				}
+			}
+		}
+
+		.update {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 5px;
+		}
+	}
+}
