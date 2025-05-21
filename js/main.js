@@ -13,10 +13,10 @@ const actualization = document.querySelector('.lastUpdate')
 const error = document.querySelector('.errorText')
 
 const weatherData = () => {
-	const apiKey = Api_key.key
+	// const apiKey = Api_key.key
 	const city = input.value || 'New york'
 
-	const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
+	  const apiUrl = `/api/weather?city=${city}`;
 
 	axios
 		.get(apiUrl)
