@@ -1,6 +1,6 @@
 
 
-import Api_key from "./Api_key.js"
+
 
 const input = document.querySelector('.input')
 const btn = document.querySelector('.searchBtn')
