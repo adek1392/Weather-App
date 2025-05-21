@@ -6,7 +6,7 @@ która pobiera aktualne dane pogodowe z [WeatherAPI.com](https://www.weatherapi.
 
 ## 🔗 Demo
 
-Zobacz aplikację na żywo: [weather-app.vercel.app](https://weather-app-git-main-adrians-projects-06f1dc67.vercel.app/)
+Zobacz aplikację na żywo: [weather-app.vercel.app](https://weather-app-weld-five.vercel.app/)
 
 ## ✨ Funkcje
 
